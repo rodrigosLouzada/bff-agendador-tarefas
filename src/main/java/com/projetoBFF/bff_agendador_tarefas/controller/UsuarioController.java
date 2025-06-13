@@ -1,6 +1,7 @@
 package com.projetoBFF.bff_agendador_tarefas.controller;
 
 
+import com.projetoBFF.bff_agendador_tarefas.business.UsuarioService;
 import com.projetoBFF.bff_agendador_tarefas.business.dto.EnderecoDTO;
 import com.projetoBFF.bff_agendador_tarefas.business.dto.TelefoneDTO;
 import com.projetoBFF.bff_agendador_tarefas.business.dto.UsuarioDTO;
@@ -23,7 +24,7 @@ public class UsuarioController {
 
     @PostMapping("/login")
     public String login(@RequestBody UsuarioDTO usuarioDTO){
-        return usuarioService(usuarioDTO);
+        return usuarioService.loginUsuario(usuarioDTO);
     }
 
     @GetMapping
